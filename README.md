@@ -9,10 +9,12 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 📁 1. Create a Resource Group</summary>
 
+<img width="463" height="449" alt="image" src="https://github.com/user-attachments/assets/1e9fe007-feb7-4f8a-978c-d781febe87f5" />
+
 - Go to the **Azure Portal** > **Resource Groups** > *Create*.
   
 - Set:
-  - **Name**: `AD-Lab-RG`
+  - **Name**: `Active-D`
   - **Region**: your preferred region (e.g., `East US`)
 
 
