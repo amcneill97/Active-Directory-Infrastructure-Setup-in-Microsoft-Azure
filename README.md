@@ -1,4 +1,4 @@
-# Active-Directory-Infrastructure-Setup-in-Microsoft-Azure
+# Active Directory Infrastructure Setup in Microsoft Azure
 <p>
 <p>
 
@@ -10,6 +10,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 📁 1. Create a Resource Group</summary>
 
 - Go to the **Azure Portal** > **Resource Groups** > *Create*.
+  
 - Set:
   - **Name**: `AD-Lab-RG`
   - **Region**: your preferred region (e.g., `East US`)
@@ -22,6 +23,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 🌐 2. Create a Virtual Network and Subnet</summary>
 
 - Go to **Virtual Networks** > *Create*.
+
 - Configure:
   - **Name**: `AD-VNet`
   - **Address space**: `10.0.0.0/16`
