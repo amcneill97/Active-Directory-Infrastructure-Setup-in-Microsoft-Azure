@@ -6,20 +6,20 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 ---
 
-<details>
-<summary>📁 1. Create a Resource Group</summary>
+
+📁 1. Create a Resource Group</summary>
 
 - Go to the **Azure Portal** > **Resource Groups** > *Create*.
 - Set:
   - **Name**: `AD-Lab-RG`
   - **Region**: your preferred region (e.g., `East US`)
 
-</details>
+
 
 ---
 
-<details>
-<summary>🌐 2. Create a Virtual Network and Subnet</summary>
+
+🌐 2. Create a Virtual Network and Subnet</summary>
 
 - Go to **Virtual Networks** > *Create*.
 - Configure:
@@ -29,12 +29,12 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
   - **Subnet range**: `10.0.1.0/24`
   - **Region**: same as the Resource Group
 
-</details>
+
 
 ---
 
-<details>
-<summary>🖥️ 3. Create the Domain Controller VM (DC-1)</summary>
+
+🖥️ 3. Create the Domain Controller VM (DC-1)</summary>
 
 - Go to **Virtual Machines** > *Create*.
 - Configure:
@@ -48,12 +48,12 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
   - **Public IP**: Enable (for RDP)
   - **Inbound Ports**: Allow **RDP (3389)**
 
-</details>
+
 
 ---
 
-<details>
-<summary>🔧 4. Configure DC-1 Networking</summary>
+
+🔧 4. Configure DC-1 Networking</summary>
 
 - After VM creation:
   - Go to **DC-1** > **Networking** > **Network Interface** > **IP Configurations**
@@ -66,12 +66,12 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
     - Public  
   ⚠️ *Only disable firewall in controlled lab environments.*
 
-</details>
+
 
 ---
 
-<details>
-<summary>💻 5. Create the Client VM (Client-1)</summary>
+
+💻 5. Create the Client VM (Client-1)</summary>
 
 - Go to **Virtual Machines** > *Create*.
 - Configure:
@@ -85,12 +85,12 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
   - **Public IP**: Enable
   - **Inbound Ports**: Allow **RDP (3389)**
 
-</details>
+
 
 ---
 
-<details>
-<summary>🌐 6. Configure Client-1 DNS Settings</summary>
+
+🌐 6. Configure Client-1 DNS Settings</summary>
 
 - Go to **Client-1** > **Networking** > **Network Interface** > **DNS Servers**
 - Set:
@@ -99,12 +99,10 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 - Click **Save**
 - Go to **Client-1 VM** and **Restart** it from the Azure Portal
 
-</details>
+
 
 ---
-
-<details>
-<summary>🔄 7. Test Network Connectivity</summary>
+🔄 7. Test Network Connectivity</summary>
 
 - RDP into **Client-1**
 - Open **PowerShell** or **Command Prompt**:
@@ -113,9 +111,6 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 - Run: `ipconfig /all`
   - Confirm that the **DNS Server** is set to **DC-1’s private IP**
 
-</details>
-
----
 
 ## ✅ Next Steps (Optional)
 
