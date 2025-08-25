@@ -2,7 +2,7 @@
 <p>
 <p>
 
-This guide walks you through setting up a Domain Controller (`DC-1`) and a client machine (`Client-1`) in Microsoft Azure for lab/testing purposes.
+This guide walks you through setting up a Domain Controller (`dc-1`) and a client machine (`client-1`) in Microsoft Azure for lab/testing purposes.
 
 ---
 
@@ -46,7 +46,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 ---
 
 
-🖥️ 3. Create the Domain Controller VM (DC-1)</summary>
+🖥️ 3. Create the Domain Controller VM (dc-1)</summary>
 <p>
 
 
@@ -57,7 +57,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
   
 - Configure:
   
-  - **Name**: `DC-1`
+  - **Name**: `dc-1`
   - **Image**: Windows Server 2022
   - **Username**: `labuser`
   - **Password**: `Cyberlab123!`
@@ -73,19 +73,19 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 ---
 
 
-🔧 4. Configure DC-1 Networking</summary>
+🔧 4. Configure dc-1 Networking</summary>
 
 <p>
   
 - After VM creation:
   
-  - Go to **DC-1** > **Networking** > **Network Settings** > **IP Configurations**
+  - Go to **dc-1** > **Networking** > **Network Settings** > **IP Configurations**
   - Set **Private IP address** to **Static**
  
 <img width="483" height="361" alt="image" src="https://github.com/user-attachments/assets/9f7f545e-01e2-4238-8ee0-c237b3f0f8ee" />
 
     
-- RDP into **DC-1**
+- RDP into **dc-1**
   
   - Open **Windows Defender Firewall**
   - Turn off the firewall for all profiles:
@@ -100,7 +100,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 ---
 
 
-💻 5. Create the Client VM (Client-1)</summary>
+💻 5. Create the Client VM (client-1)</summary>
 
 - Go to **Virtual Machines** > *Create*.
 
@@ -108,11 +108,11 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
   
 - Configure:
   
-  - **Name**: `Client-1`
+  - **Name**: `client-1`
   - **Image**: Windows 10 (latest available)
   - **Username**: `labuser`
   - **Password**: `Cyberlab123!`
-  - **Region**: same as DC-1
+  - **Region**: same as dc-1
   - **Virtual Network**: `AD-VNet`
   - **Subnet**: `AD-Subnet`
   - **Public IP**: Enable
@@ -123,16 +123,16 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 ---
 
 
-🌐 6. Configure Client-1 DNS Settings</summary>
+🌐 6. Configure client-1 DNS Settings</summary>
 
-- Go to **Client-1** > **Networking** > **Network Settings** > **DNS Servers**
+- Go to **client-1** > **Networking** > **Network Settings** > **DNS Servers**
 <p>
-  <img width="122" height="327" alt="image" src="https://github.com/user-attachments/assets/ef16c031-8e9d-4e21-918b-405ae994c8a5" />
+  <img width="150" height="350" alt="image" src="https://github.com/user-attachments/assets/ef16c031-8e9d-4e21-918b-405ae994c8a5" />
 
 - Set:
   
   - **DNS**: **Custom**
-  - Enter **DC-1’s private IP address**
+  - Enter **dc-1’s private IP address**
     
 - Click **Save**
   
@@ -146,15 +146,19 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 ---
 🔄 7. Test Network Connectivity</summary>
 
-- RDP into **Client-1**
+- RDP into **client-1**
   
 - Open **PowerShell** or **Command Prompt**:
   
   - Run: `ping <DC-1 Private IP>`
   - Confirm that the ping is successful
-    
+
+
 - Run: `ipconfig /all`
   
   - Confirm that the **DNS Server** is set to **DC-1’s private IP**
+
+<img width="830" height="169" alt="image" src="https://github.com/user-attachments/assets/396deab6-a2c6-4d47-b2a1-2992effe9f3e" />
+
 
 
