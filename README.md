@@ -121,10 +121,3 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
   - Confirm that the **DNS Server** is set to **DC-1’s private IP**
 
 
-## ✅ Next Steps (Optional)
-
-Once basic connectivity is working, you can proceed with:
-
-- Installing **Active Directory Domain Services** on `DC-1`
-- Promoting `DC-1` to a **Domain Controller**
-- Joining `Client-1` to the **domain**
