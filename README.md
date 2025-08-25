@@ -9,9 +9,10 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 📁 1. Create a Resource Group</summary>
 
-<img width="463" height="449" alt="image" src="https://github.com/user-attachments/assets/1e9fe007-feb7-4f8a-978c-d781febe87f5" />
 
 - Go to the **Azure Portal** > **Resource Groups** > *Create*.
+
+<img width="370" height="359" alt="image" src="https://github.com/user-attachments/assets/1e9fe007-feb7-4f8a-978c-d781febe87f5" />
   
 - Set:
   
@@ -25,7 +26,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 🌐 2. Create a Virtual Network and Subnet</summary>
 
-<img width="466" height="449" alt="image" src="https://github.com/user-attachments/assets/1a480008-8780-497c-9c4d-d3ac38c02ee2" />
+<img width="370" height="359" alt="image" src="https://github.com/user-attachments/assets/1a480008-8780-497c-9c4d-d3ac38c02ee2" />
 
 
 
@@ -33,6 +34,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 - Go to **Virtual Networks** > *Create*.
 
 - Configure:
+  
   - **Name**: `AD-VNet`
   - **Address space**: `10.0.0.0/16`
   - **Subnet name**: `AD-Subnet`
@@ -47,11 +49,11 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 🖥️ 3. Create the Domain Controller VM (DC-1)</summary>
 <p>
 
-<img width="548" height="444" alt="image" src="https://github.com/user-attachments/assets/4c41076b-80ea-42b7-93a4-1ef7fa90a150" />
-
 
 
 - Go to **Virtual Machines** > *Create*.
+
+<img width="370" height="359" alt="image" src="https://github.com/user-attachments/assets/4c41076b-80ea-42b7-93a4-1ef7fa90a150" />
   
 - Configure:
   
@@ -101,7 +103,11 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 💻 5. Create the Client VM (Client-1)</summary>
 
 - Go to **Virtual Machines** > *Create*.
+
+<img width="370" height="359" alt="image" src="https://github.com/user-attachments/assets/2b216a88-34aa-4300-b2c8-d2110b9be1a9" />
+  
 - Configure:
+  
   - **Name**: `Client-1`
   - **Image**: Windows 10 (latest available)
   - **Username**: `labuser`
@@ -141,10 +147,14 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 🔄 7. Test Network Connectivity</summary>
 
 - RDP into **Client-1**
+  
 - Open **PowerShell** or **Command Prompt**:
+  
   - Run: `ping <DC-1 Private IP>`
   - Confirm that the ping is successful
+    
 - Run: `ipconfig /all`
+  
   - Confirm that the **DNS Server** is set to **DC-1’s private IP**
 
 
