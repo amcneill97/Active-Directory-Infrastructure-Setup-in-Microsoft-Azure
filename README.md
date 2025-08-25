@@ -24,6 +24,11 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 🌐 2. Create a Virtual Network and Subnet</summary>
 
+<img width="466" height="449" alt="image" src="https://github.com/user-attachments/assets/1a480008-8780-497c-9c4d-d3ac38c02ee2" />
+
+
+
+
 - Go to **Virtual Networks** > *Create*.
 
 - Configure:
