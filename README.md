@@ -14,6 +14,7 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 - Go to the **Azure Portal** > **Resource Groups** > *Create*.
   
 - Set:
+  
   - **Name**: `Active-D`
   - **Region**: your preferred region (e.g., `East US`)
 
@@ -44,17 +45,22 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 
 🖥️ 3. Create the Domain Controller VM (DC-1)</summary>
+<p>
 
 <img width="548" height="444" alt="image" src="https://github.com/user-attachments/assets/4c41076b-80ea-42b7-93a4-1ef7fa90a150" />
 
-<p> 
+
+
 - Go to **Virtual Machines** > *Create*.
+  
 - Configure:
+  
   - **Name**: `DC-1`
   - **Image**: Windows Server 2022
   - **Username**: `labuser`
   - **Password**: `Cyberlab123!`
   - **Region**: same as VNet
+  - **Size**: `Standard_D2s_v3 - 2 vcpus, 8 GiB memory`
   - **Virtual Network**: `AD-VNet`
   - **Subnet**: `AD-Subnet`
   - **Public IP**: Enable (for RDP)
@@ -67,15 +73,24 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 🔧 4. Configure DC-1 Networking</summary>
 
+<p>
+  
 - After VM creation:
-  - Go to **DC-1** > **Networking** > **Network Interface** > **IP Configurations**
+  
+  - Go to **DC-1** > **Networking** > **Network Settings** > **IP Configurations**
   - Set **Private IP address** to **Static**
+ 
+<img width="483" height="361" alt="image" src="https://github.com/user-attachments/assets/9f7f545e-01e2-4238-8ee0-c237b3f0f8ee" />
+
+    
 - RDP into **DC-1**
+  
   - Open **Windows Defender Firewall**
   - Turn off the firewall for all profiles:
     - Domain
     - Private
-    - Public  
+    - Public
+       
   ⚠️ *Only disable firewall in controlled lab environments.*
 
 
@@ -104,12 +119,21 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 🌐 6. Configure Client-1 DNS Settings</summary>
 
-- Go to **Client-1** > **Networking** > **Network Interface** > **DNS Servers**
+- Go to **Client-1** > **Networking** > **Network Settings** > **DNS Servers**
+<p>
+  <img width="122" height="327" alt="image" src="https://github.com/user-attachments/assets/ef16c031-8e9d-4e21-918b-405ae994c8a5" />
+
 - Set:
+  
   - **DNS**: **Custom**
   - Enter **DC-1’s private IP address**
+    
 - Click **Save**
+  
 - Go to **Client-1 VM** and **Restart** it from the Azure Portal
+
+
+
 
 
 
