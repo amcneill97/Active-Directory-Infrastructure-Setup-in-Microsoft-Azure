@@ -45,6 +45,9 @@ This guide walks you through setting up a Domain Controller (`DC-1`) and a clien
 
 🖥️ 3. Create the Domain Controller VM (DC-1)</summary>
 
+<img width="548" height="444" alt="image" src="https://github.com/user-attachments/assets/4c41076b-80ea-42b7-93a4-1ef7fa90a150" />
+
+<p> 
 - Go to **Virtual Machines** > *Create*.
 - Configure:
   - **Name**: `DC-1`
