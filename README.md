@@ -109,14 +109,14 @@ This guide walks you through setting up a Domain Controller (`dc-1`) and a clien
 - Configure:
   
   - **Name**: `client-1`
-  - **Image**: Windows 10 (latest available)
+  - **Image**: `Windows 10` (latest available)
   - **Username**: `labuser`
   - **Password**: `Cyberlab123!`
   - **Region**: same as dc-1
   - **Virtual Network**: `AD-VNet`
   - **Subnet**: `AD-Subnet`
-  - **Public IP**: Enable
-  - **Inbound Ports**: Allow **RDP (3389)**
+  - **Public IP**: `Enable`
+  - **Inbound Ports**: `Allow` **RDP (3389)**
 
 
 
