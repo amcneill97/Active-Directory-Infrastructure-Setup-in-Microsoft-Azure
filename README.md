@@ -89,9 +89,9 @@ This guide walks you through setting up a Domain Controller (`dc-1`) and a clien
   
   - Open **Windows Defender Firewall**
   - Turn off the firewall for all profiles:
-    - Domain
-    - Private
-    - Public
+    - `Domain`
+    - `Private`
+    - `Public`
        
   ⚠️ *Only disable firewall in controlled lab environments.*
 
