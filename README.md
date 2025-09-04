@@ -151,13 +151,13 @@ This guide walks you through setting up a Domain Controller (`dc-1`) and a clien
   
 - Open **PowerShell** or **Command Prompt**:
   
-  - Run: `ping <DC-1 Private IP>`
+  - Run: `ping <dc-1 Private IP>`
   - Confirm that the ping is successful
 
 
 - Run: `ipconfig /all`
   
-  - Confirm that the **DNS Server** is set to **DC-1’s private IP**
+  - Confirm that the **DNS Server** is set to **dc-1’s private IP**
     <p></p>
 
   <img width="830" height="169" alt="Image" src="https://github.com/user-attachments/assets/d2fd53b5-0c3e-421a-9039-4d17f6530de1" />
